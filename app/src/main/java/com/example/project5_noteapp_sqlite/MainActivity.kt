@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project5_noteapp_sqlite.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var listNote: ArrayList<Note>
 
     private lateinit var binding:ActivityMainBinding
     private lateinit var db:NoteDatabaseHelper
@@ -28,7 +29,27 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AddNoteActivity::class.java)
             startActivity(intent)
         }
+        //onItemClick
+//        noteAdapter.setOnItemClickListener(object :NoteAdapter.onItemClickListener{
+//            override fun onItemClick(position: Int) {
+//
+//                db.getDetailsNote(listNote[position])
+//
+//                val intent = Intent(this@MainActivity,DeltailsNoteActivity::class.java)
+//                intent.putExtra("id",listNote[position].id)
+//                intent.putExtra("title",listNote[position].title)
+//                intent.putExtra("content",listNote[position].content)
+//
+//                startActivity(intent)
+//            }
+//        })
+
+        //xoa item
+        binding.noteRecyclerView
+
     }
+
+
 
     override fun onResume() {
         super.onResume()

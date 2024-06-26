@@ -26,7 +26,6 @@ class AddNoteActivity : AppCompatActivity() {
             val title = binding.edtNameNote.text.toString()
             val content = binding.edtDescription.text.toString()
             val note = Note(0,title,content)
-
             db.insertNote(note)
             finish()
             Toast.makeText(this,"Note Saved",Toast.LENGTH_SHORT).show()
