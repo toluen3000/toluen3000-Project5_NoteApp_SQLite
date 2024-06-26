@@ -83,6 +83,8 @@ class NoteDatabaseHelper (context: Context):SQLiteOpenHelper(context, DATABASE_N
         val db = readableDatabase
         val query = "SELECT * FROM $TABLE_NAME WHERE $COLUMN_ID = $id"
         val cursor = db.rawQuery(query,null)
+        //chuyen con tro toi note co id can sua
+        cursor.moveToFirst()
         val idNote = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
         val title = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TITLE))
         val content = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CONTENT))

@@ -15,13 +15,14 @@ class UpdateNotesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityUpdateNotesBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_update_notes)
+        setContentView(binding.root)
 
         //get infor
         db = NoteDatabaseHelper(this)
         noteId = intent.getIntExtra("note_id",-1)
         if (noteId == -1){
             finish()
+            Toast.makeText(this,"Updated note successfully",Toast.LENGTH_SHORT).show()
             return
         }
 
