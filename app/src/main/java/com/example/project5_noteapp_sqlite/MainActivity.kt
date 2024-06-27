@@ -2,13 +2,12 @@ package com.example.project5_noteapp_sqlite
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project5_noteapp_sqlite.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var listNote: ArrayList<Note>
-
     private lateinit var binding:ActivityMainBinding
     private lateinit var db:NoteDatabaseHelper
     private lateinit var noteAdapter: NoteAdapter
@@ -44,8 +43,8 @@ class MainActivity : AppCompatActivity() {
 //            }
 //        })
 
-        //xoa item
-        binding.noteRecyclerView
+
+
 
     }
 
